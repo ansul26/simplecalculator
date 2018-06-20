@@ -11,15 +11,28 @@ html {
 	text-align: center;
 }
 
-.button{
+.button
+{
 	position: relative;
 	width: 60px;
 	height: 50px;
-	border:none;
+	border-style: solid;
+	border-width: 5px;
+	outline-style: solid;
+	outline-color: green;
 	background: none;
 	font-size: 36;
 	margin: 11px;
 	font-family: 'Verdana', Serif;
 	font-weight: lighter;
-	color: #ffffff;
+	color: #000000;
+}
+
+.display input{
+	height: 55px;
+	width: 345px;
+	text-align: right;
+	font-size: 40px;
+	opacity: 0.5;
+
 }
