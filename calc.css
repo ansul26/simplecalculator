@@ -1,0 +1,25 @@
+
+html {
+    background-image: url("images.jpeg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    
+}
+
+.container{
+	margin: 150px 0 0 0;
+	text-align: center;
+}
+
+.button{
+	position: relative;
+	width: 60px;
+	height: 50px;
+	border:none;
+	background: none;
+	font-size: 36;
+	margin: 11px;
+	font-family: 'Verdana', Serif;
+	font-weight: lighter;
+	color: #ffffff;
+}
