@@ -18,21 +18,11 @@ function addDecimal(){
 
 function setOperator(operator){
 	var display= document.getElementById("display");
-	if (operator == '+') {
-		display.value += '+';
-	    //document.getElementById("display") = display.value;
+	if (display.value=='' && operator != '-') {
+		return;
+     
 	}
-	else if (operator == '-') {
-		display.value += '-';
-		//document.getElementById("display") = display.value;
-	}
-	else if (operator == '*') {
-		display.value += '*';
-		//document.getElementById("display") = display.value;
-	}
-	else if (operator == '/') {
-		display.value += '/';
-		//document.getElementById("display") = display.value;
-	}
+	else{
+	display.value += operator;}
 }
 
