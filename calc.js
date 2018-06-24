@@ -1,3 +1,4 @@
+var ans=0;
 function c(){
 	var display= document.getElementById("display");
 	display.value='';
@@ -13,8 +14,18 @@ function numInput(digit){
 
 function addDecimal(){
 	var display= document.getElementById("display");
-	if (display.value.indexOf('.')=== -1) display.value += '.';
+	display.value += '.';
 }
+function backspace(){
+	var display= document.getElementById("display");
+	
+	
+	var s=display.value.slice(0,display.value.length-1);
+	display.value=s;
+	
+
+}
+
 
 function setOperator(operator){
 	var display= document.getElementById("display");
@@ -31,7 +42,7 @@ function e(){
 var display=document.getElementById("display");
 
 	var flag=false;
-	console.log(display.value[0]);
+	
 	if (display.value[0]=='-') {flag=true;}
 	var bool = true;
 	opers=['/','*','+','-'];
@@ -44,11 +55,13 @@ var display=document.getElementById("display");
 	if (bool) {
 	var express=display.value;
 	var exp_copy=express;
-    express = express.replace(/[0-9]+/g, "#").replace(/[\(|\|\.)]/g, "");
+    express = express.replace(/[0-9\.]+/g, "#");
     var nums = exp_copy.split(/[^0-9\.]+/);
+    //console.log(nums);
     var ops = express.split("#").filter(function(n){return n});
-    if (nums[0]==""){nums.splice(0,1);}
     
+    if (nums[0]==""){nums.splice(0,1);}
+    //console.log(ops);
     if (flag==true) {
     
 	nums[0]= (-1*parseFloat(nums[0])).toString();
@@ -78,9 +91,13 @@ var display=document.getElementById("display");
 			nums[i]=parseFloat(nums[i])-parseFloat(nums[i+1]);
 		}
 	}
-	
+ans=Number(nums[0]);	
 display.value=Number(nums[0]);
 
 }
-
+}
+function prevResult()
+{
+	document.getElementById("display").value=ans;
+	
 }
